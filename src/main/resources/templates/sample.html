@@ -42,7 +42,10 @@ Hi! Get Test.
 <h2>ternary operator</h2>
 <div th:text="(${user.name} == 'coldmater') ? 'This is You! coldmater!' : 'is Not You! 😱'"></div>
 <div th:text="(${user.name} == 'coldmater2') ? 'This is You! coldmater!' : 'is Not You! 😱'"></div>
-<div th:text="(32 >= 32) ? 'This is You! coldmater!' : 'is Not You! 😱'"></div>
+<div th:text="(32 >= 32) ? 'This is You! coldmater!' : 'is Not You! '"></div>
+
+<h1>Data Conversion / Formatting - Double bracelets ${{...}} or *{{...}}</h1>
+<div th:text="${{yesterday}}">yesterday</div>
 
 </body>
 </html>
