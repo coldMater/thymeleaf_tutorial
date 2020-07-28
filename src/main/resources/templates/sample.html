@@ -8,6 +8,9 @@
 Hi! Get Test.
 environment Variable from Properties
 <p th:text="#{home.sample(${name})}"></p>
-그냥 한글
+
+<div th:text="${#locale}">지역</div>
+<span th:text="${#strings.append('날짜 ', today)}"></span>
+하이
 </body>
 </html>
