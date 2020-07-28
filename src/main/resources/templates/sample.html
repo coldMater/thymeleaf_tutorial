@@ -53,5 +53,19 @@ Hi! Get Test.
         <td th:text="${prod.name + iterStat.odd}"></td>
     </tr>
 </table>
+
+<!--볼 수 있는 주석-->
+<!--/* 볼 수 없는 주석 */-->
+<!--/*
+    <div>
+        블록 단위 주석
+    </div>
+ */-->
+
+<!--/*/
+<div>이건 왜 하는지 모르겠음. 그대로 나오는 주석인데 주석이 아님.</div>
+아하. 정적으로 열렸을 때는 나타나지 않음 그래서 이름이 prototype-only comment
+/*/-->
+
 </body>
 </html>
