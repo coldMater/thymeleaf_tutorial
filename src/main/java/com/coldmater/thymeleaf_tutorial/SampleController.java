@@ -13,6 +13,7 @@ public class SampleController {
 
     @GetMapping("/sample")
     public String sample(Model model){
+        model.addAttribute("name", "chanwool");
         return "sample";
     }
 }
