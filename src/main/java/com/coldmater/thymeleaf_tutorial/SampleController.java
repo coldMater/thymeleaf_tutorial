@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 @Controller
@@ -24,6 +26,14 @@ public class SampleController {
 
         User user = new User("coldmater", 14);
         model.addAttribute(user);
+
+        List<User> userList = new ArrayList();
+        userList.add(user);
+        userList.add(user);
+        userList.add(user);
+        userList.add(user);
+        model.addAttribute("prods", userList);
+
 
         return "sample";
     }

@@ -47,5 +47,11 @@ Hi! Get Test.
 <h1>Data Conversion / Formatting - Double bracelets ${{...}} or *{{...}}</h1>
 <div th:text="${{yesterday}}">yesterday</div>
 
+
+<table>
+    <tr th:each="prod, iterStat: ${prods}">
+        <td th:text="${prod.name + iterStat.odd}"></td>
+    </tr>
+</table>
 </body>
 </html>
