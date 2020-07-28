@@ -36,6 +36,13 @@ Hi! Get Test.
 <h1>URL 접근 - Path Variable</h1>
 <a href="another.html" th:href="@{/another/123}">URL 접근 확인</a>
 
+<h1>Comparators and Equality</h1>
+<div th:if="32 > 1">hi //나타남</div>
+<div th:if="1 > 32">hello //나타나지 않음</div>
+<h2>ternary operator</h2>
+<div th:text="(${user.name} == 'coldmater') ? 'This is You! coldmater!' : 'is Not You! 😱'"></div>
+<div th:text="(${user.name} == 'coldmater2') ? 'This is You! coldmater!' : 'is Not You! 😱'"></div>
+<div th:text="(32 >= 32) ? 'This is You! coldmater!' : 'is Not You! 😱'"></div>
 
 </body>
 </html>
