@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang=en xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>anotherPage</title>
+</head>
+<body>
+<h1>request에 직접 접근하기</h1>
+<span th:text="${#request.getParameter('id')}"></span>
+
+<h2>request의 값을 RequestParam 어노테이션으로 받아 Model에 따로 전달하기</h2>
+<span th:text="${id}"></span>
+
+<h1>PathVariable 로 변수 받기</h1>
+<span th:text="${pathId}"></span>
+
+</body>
+</html>

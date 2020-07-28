@@ -28,5 +28,14 @@ Hi! Get Test.
 그냥 단순히 아래와 같이 사용할 수도 있음(객체 접근)
 <div th:text="${user.age}"></div>
 <div th:text="${user.getAge()}"></div>
+
+<h1>URL 접근 - QueryString</h1>
+<a href="another.html" th:href="@{/another(id=42)}">URL 접근 확인</a>
+//href 자체는 굳이 안써줘도 되는듯 하다.
+
+<h1>URL 접근 - Path Variable</h1>
+<a href="another.html" th:href="@{/another/123}">URL 접근 확인</a>
+
+
 </body>
 </html>
