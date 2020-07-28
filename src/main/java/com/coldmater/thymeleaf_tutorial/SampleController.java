@@ -17,6 +17,11 @@ public class SampleController {
     public String sample(Model model){
         model.addAttribute("name", "chanwool");
         model.addAttribute("today", LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE));
+
+        User user = new User("coldmater", 14);
+        model.addAttribute(user);
+
         return "sample";
     }
 }
+

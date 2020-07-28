@@ -6,11 +6,27 @@
 </head>
 <body>
 Hi! Get Test.
-environment Variable from Properties
+<h1>message source i18n with thymeleaf</h1>
 <p th:text="#{home.sample(${name})}"></p>
 
+
+<h1>Expression Utility</h1>
 <div th:text="${#locale}">지역</div>
 <span th:text="${#strings.append('날짜 ', today)}"></span>
-하이
+
+<h1>Selection Variable Expression</h1>
+<div th:object="${user}"}>
+    <div>
+        <span>이름: </span>
+        <span th:text="*{name}"></span>
+    </div>
+    <div>
+        <span>나이: </span>
+        <span th:text="*{age}"></span>
+    </div>
+</div>
+그냥 단순히 아래와 같이 사용할 수도 있음(객체 접근)
+<div th:text="${user.age}"></div>
+<div th:text="${user.getAge()}"></div>
 </body>
 </html>
